@@ -92,7 +92,7 @@ const deleteSingleProduct = async (req: Request, res: Response) => {
     res.status(200).json({
       success: true,
       message: 'Product deleted successfully!',
-      data: result,
+      data: (result?.deletedCount === 1 || result?.deletedCount === 0) && null,
     });
   } catch (error: any) {
     res.status(500).json({
