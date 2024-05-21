@@ -1,6 +1,6 @@
 import express, { Application, Request, Response } from 'express';
 import core from 'cors';
-import { ProductsRoute } from './app/modules/products/products.route';
+import { ProductsRoute } from './app/modules/products.route';
 const app: Application = express();
 
 //parser
