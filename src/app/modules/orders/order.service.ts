@@ -34,6 +34,7 @@ const createOrderFromDB = async (orderData: TOrder) => {
       throw new Error('Insufficient quantity available in inventory');
     }
     product.inventory.quantity = totalQuantity;
+    product.inventory.inStock = totalQuantity > 0;
     await product.save();
     const result = await Order.create(orderData);
     return result;
