@@ -9,7 +9,6 @@ import { Order } from './order.model';
 //   if (totalQuantity < 0) {
 //     throw new Error('Insufficient quantity available in inventory');
 //   }
-
 //   if (exists) {
 //     const result = await Order.create(orderData);
 //     const objectId = new mongoose.Types.ObjectId(id);
