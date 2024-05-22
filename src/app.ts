@@ -9,6 +9,10 @@ app.use(core());
 
 app.use('/api', ProductsRoute);
 
+app.get('/', (req: Request, res: Response) => {
+  res.send('app run successfully');
+});
+
 app.get('*', (req: Request, res: Response) => {
   res.send({
     success: false,
