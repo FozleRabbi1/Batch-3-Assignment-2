@@ -11,5 +11,6 @@ router.post('/products', ProductController.createProduct);
 router.get('/products', ProductController.getAllProduct);
 
 router.post('/orders', orderController.createOrder);
+router.get('/orders', orderController.getAllOrder);
 
 export const ProductsRoute = router;
