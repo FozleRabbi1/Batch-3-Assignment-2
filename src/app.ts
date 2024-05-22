@@ -9,9 +9,11 @@ app.use(core());
 
 app.use('/api', ProductsRoute);
 
-app.get('/', (req: Request, res: Response) => {
-  const a = 'server run success fully';
-  res.send(a);
+app.get('*', (req: Request, res: Response) => {
+  res.send({
+    success: false,
+    message: 'Route not found',
+  });
 });
 
 export default app;
