@@ -1,5 +1,5 @@
-## This is a simple Product Management system back-end code 
-# if You want to try it , you can clone the repository
+# This is a simple Product Management system back-end code 
+## if You want to try it , you can clone the repository
 * step 1 = at firse clone it
 * step 2 = install all package use yarn
 * step 3 = create your own Database 
