@@ -13,7 +13,7 @@ app.get('/', (req: Request, res: Response) => {
   res.send('app run successfully');
 });
 
-app.get('*', (req: Request, res: Response) => {
+app.use('*', (req: Request, res: Response) => {
   res.send({
     success: false,
     message: 'Route not found',

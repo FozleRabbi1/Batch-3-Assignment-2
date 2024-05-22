@@ -1,4 +1,4 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
 import { ProductController } from './products/products.controller';
 import { orderController } from './orders/order.controller';
 
@@ -12,12 +12,5 @@ router.get('/products', ProductController.getAllProduct);
 
 router.post('/orders', orderController.createOrder);
 router.get('/orders', orderController.getAllOrder);
-
-router.get('*', (req: Request, res: Response) => {
-  res.send({
-    success: false,
-    message: 'Route not found',
-  });
-});
 
 export const ProductsRoute = router;

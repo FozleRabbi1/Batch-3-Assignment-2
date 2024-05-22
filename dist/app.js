@@ -14,7 +14,7 @@ app.use('/api', products_route_1.ProductsRoute);
 app.get('/', (req, res) => {
     res.send('app run successfully');
 });
-app.get('*', (req, res) => {
+app.use('*', (req, res) => {
     res.send({
         success: false,
         message: 'Route not found',
